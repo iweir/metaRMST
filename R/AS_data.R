@@ -1,6 +1,6 @@
 #' Aortic Stenosis RCT data
 #'
-#' Reconstructed data from randomized controlled trials of transcatheter aortic valve
+#' Reconstructed data from 5 randomized controlled trials of transcatheter aortic valve
 #' replacement vs surgery in patients with Aortic Stenosis.
 #' @docType data
 #' @usage data(AorticStenosisTrials)
@@ -26,11 +26,12 @@
 #'  JS, Gleason, TG, Lee, JS and  others. (2016).  3-year outcomes in high-risk patients who underwent surgical
 #'  or transcatheter aortic valve replacement. J Am Coll Cardiol 67(22), 2565-2574.
 #' @note \code{trialID}
-#' \itemize{
-#'   \item \code{trialID}=1; NOTION
-#'   \item \code{trialID}=2; PARTNER
-#'   \item \code{trialID}=3; SURTAVI
-#'   \item \code{trialID}=4; PARTNER2
-#'   \item \code{trialID}=5; USCoreValve
+#' \tabular{cc}{
+#'   trialID \tab Name \tab Minimum of Last observed times \cr
+#'   NOTION \tab 1 \tab x \cr
+#'   PARTNER \tab 2 \tab x \cr
+#'   SURTAVI \tab 3 \tab x \cr
+#'   PARTNER2 \tab 4 \tab x \cr
+#'   USCoreValve \tab 5 \tab x \cr
 #'   }
 "AorticStenosisTrials"

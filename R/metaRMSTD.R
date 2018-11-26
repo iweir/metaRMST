@@ -14,8 +14,8 @@
 #' @param MA_method the desired meta-analysis method; options are: "mvma", "mvma_boot", "uni", "uni_flex"
 #' @return The \code{metaRMSTD} function returns a list object containing the random effect model results,
 #' the RMSTD and SE values for each trial at each available time horizon, and the estimated within-trial covariance matrix for each RCT.
-#' @note RMSTD is deemed estimable if time horizon > minimum of
-#'  last follow up times. We implement the method of moments estimator for MVMA and Dersimonian and Laird for univariate MA
+#' @note RMSTD is estimable if time horizon > minimum of
+#'  last observed times. We implement the method of moments estimator for MVMA and Dersimonian and Laird for univariate MA
 #' @details Specify the time horizons at which to calculate the meta-analytic results.
 #' The \code{trialdata} must be formatted as a dataframe containing the IPD for each single trial including trialID indication.
 #' Variable names must include Time ("Time"), Event status ("Event"), and randomization group ("Arm").
