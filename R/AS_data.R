@@ -1,7 +1,15 @@
 #' Aortic Stenosis RCT data
 #'
-#' Reconstructed data from 5 randomized controlled trials of transcatheter aortic valve
-#' replacement vs surgery in patients with Aortic Stenosis.
+#' Data from 5 randomized controlled trials of transcatheter aortic valve
+#' replacement vs surgery in patients with Aortic Stenosis. For each RCT 
+#' and respective primary endpoint, we reconstructed the
+#' individual patient data from each randomization group.
+#' We first extracted the time and survival probability coordinates 
+#' from the Kaplan–Meier curves using the 
+#' DigitizeIt software (\url{http://www.digitizeit.de/}). We used 
+#' these coordinates, the total numbers of events, and the 
+#' numbers of participants at risk to determine individual
+#' event times and event indicators. 
 #' @docType data
 #' @usage data(AorticStenosisTrials)
 #' @references
@@ -25,7 +33,11 @@
 #' Deeb,  GM,  Reardon,  MJ,  Chetcuti,  S,  Patel,  HJ,  Grossman,  PM,  Yakubov,  SJ,Kleiman, NS, Coselli,
 #'  JS, Gleason, TG, Lee, JS and  others. (2016).  3-year outcomes in high-risk patients who underwent surgical
 #'  or transcatheter aortic valve replacement. J Am Coll Cardiol 67(22), 2565-2574.
-#' @note \code{trialID}
+#'  
+#' Guyot P, Ades AE, Ouwens MJ, et al. Enhanced secondary 
+#'  analysis of survival data: reconstructing the data from 
+#'  published Kaplan-Meier survival curves. BMC Med Res Methodol 2012; 12:9.
+#' @note 
 #' \tabular{cc}{
 #'   trialID \tab Name \tab Minimum of Last observed times \cr
 #'   NOTION \tab 1 \tab x \cr

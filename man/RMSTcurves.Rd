@@ -31,7 +31,7 @@ RMSTcurves(trialdata, time_horizons, tmax = max(time_horizons),
 an object to be plotted with \code{\link{RMSTplot}}
 }
 \description{
-For use with \code{\link{RMSTplot}}. This function computes RMSTD over a specified time interval and also fits a flexible parametric model to each trial.
+Prepare the data for use with \code{\link{RMSTplot}}. This function computes RMSTD over a specified time interval and also fits a flexible parametric model to each trial.
 It also computes the estimated combined effects for each of the 4 methods described for \code{\link{metaRMSTD}}.
 }
 \references{

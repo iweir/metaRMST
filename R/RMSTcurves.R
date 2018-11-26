@@ -14,7 +14,7 @@
 #' @param MA_uni_flex TRUE or FALSE indicates whether to calculate combined effect with this method
 #' @return an object to be plotted with \code{\link{RMSTplot}}
 #' @export
-#' @description For use with \code{\link{RMSTplot}}. This function computes RMSTD over a specified time interval and also fits a flexible parametric model to each trial.
+#' @description Prepare the data for use with \code{\link{RMSTplot}}. This function computes RMSTD over a specified time interval and also fits a flexible parametric model to each trial.
 #' It also computes the estimated combined effects for each of the 4 methods described for \code{\link{metaRMSTD}}.
 #' @references Royston, P. and Parmar, MK. Flexible parametric proportional-hazards and proportional-odds models for censored
 #' survival data, with application to prognostic modelling and estimation of treatment effects.

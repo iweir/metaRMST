@@ -35,8 +35,8 @@ The \code{trialdata} must be formatted as a dataframe containing the IPD for eac
 Variable names must include Time ("Time"), Event status ("Event"), and randomization group ("Arm").
 }
 \note{
-RMSTD is deemed estimable if time horizon > minimum of
- last follow up times. We implement the method of moments estimator for MVMA and Dersimonian and Laird for univariate MA
+RMSTD is estimable if time horizon > minimum of
+ last observed times. We implement the method of moments estimator for MVMA and Dersimonian and Laird for univariate MA
 }
 \references{
 
