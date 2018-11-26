@@ -26,7 +26,7 @@ Methods include:
 \item \code{"mvma"} a multivariate meta-analysis borrowing strength across time-points with within-trial covariance matrix derived analytically
 \item \code{"mvma_boot"} a multivariate meta-analysis borrowing strength across time-points with within-trial covariance matrix derived by bootstrap
 \item \code{"uni"} a univariate meta-analysis for combined effect at each time-point using only available data
-\item \code{"uni_flex"} a univariate meta-analysis for combined effect at each time-point using estimates based on flexible parametric models
+\item \code{"uni_flex"} a univariate meta-analysis for combined effect at each time-point using estimates based on flexible parametric models as described by Wei et al (Stat Med 2015). 
 }
 }
 \details{
@@ -38,6 +38,19 @@ Variable names must include Time ("Time"), Event status ("Event"), and randomiza
 RMSTD is estimable if time horizon > minimum of
  last observed times. We implement the method of moments estimator for MVMA and Dersimonian and Laird for univariate MA
 }
-\references{
+\examples{
+# read in built-in dataset 
+dat <- AorticStenosisTrials
 
+# demonstration of meta-analysis to obtain combined effect by multivariate meta-analysis model (method="mvma")
+result <- metaRMSTD(dat, time_horizons=c(12,24,36), MA_method="mvma")
+
+# generate figure: 
+obj <- RMSTcurves(dat, time_horizons=c(12,24,36))
+RMSTplot(obj)
+}
+\references{
+Wei, Y, Royston, P, Tierney, JF and Parmar, MKB. (2015). Meta-analysis of time-to-event outcomes 
+from randomized trials using restricted mean survival time: application to 
+individual participant data. Stat Med 34(21), 2881-2898.
 }
