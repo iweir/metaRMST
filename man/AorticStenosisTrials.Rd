@@ -21,14 +21,16 @@ numbers of participants at risk to determine individual
 event times and event indicators.
 }
 \note{
-\tabular{cc}{
-  trialID \tab Name \tab Minimum of Last observed times \cr
-  NOTION \tab 1 \tab x \cr
-  PARTNER \tab 2 \tab x \cr
-  SURTAVI \tab 3 \tab x \cr
-  PARTNER2 \tab 4 \tab x \cr
-  USCoreValve \tab 5 \tab x \cr
-  }
+\tabular{c|c|c}{
+  trialID \tab Name \tab Minimum of last observed times*\cr
+  ---------------------------------\tab--------------------\tab-----------------------------------------------\cr
+  1 \tab NOTION \tab 24.0\cr
+  2 \tab PARTNER \tab 63.3\cr
+  3 \tab SURTAVI \tab 24.1\cr
+  4 \tab PARTNER2 \tab 36.1\cr
+  5 \tab USCoreValve \tab 24.1}
+* Times for each trial are determined by the minimum of the last observed times across the two randomization groups.
+All reported times above are in months.
 }
 \references{
 Sondergaard, L, Steinbruchel, DA, Ihlemann, N, Nissen, H, Kjeldsen, BJ, Peturs-son, P, Ngo, AT, Olsen, NT,
