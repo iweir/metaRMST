@@ -23,7 +23,7 @@
 #' # read in built-in dataset 
 #' dat <- AorticStenosisTrials
 #' 
-#' # demonstration of meta-analysis to obtain combined effect by multivariate meta-analysis model (method="mvma")
+#' # meta-analysis to obtain combined effect by multivariate model (method="mvma")
 #' result <- metaRMSTD(dat, time_horizons=c(12,24,36), MA_method="mvma")
 #' 
 #' # generate figure: 

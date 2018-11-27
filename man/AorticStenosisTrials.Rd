@@ -21,7 +21,7 @@ numbers of participants at risk to determine individual
 event times and event indicators.
 }
 \note{
-\tabular{c|c|c}{
+\tabular{ccc}{
   trialID \tab Name \tab Minimum of last observed times*\cr
   ---------------------------------\tab--------------------\tab-----------------------------------------------\cr
   1 \tab NOTION \tab 24.0\cr

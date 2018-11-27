@@ -14,6 +14,26 @@ RMSTplot(RMSTobject, type = "l", col = c("red", "blue", "green",
 \arguments{
 \item{RMSTobject}{object created by RMSTcurves}
 
+\item{type}{specify plot type (defaults to line plot)}
+
+\item{col}{option to specify vector of colors for each study}
+
+\item{lwd}{option to specify line width}
+
+\item{ylim}{option to specify limits for y axis}
+
+\item{yby}{option to specify intervals for y axis}
+
+\item{xlim}{option to specify limits for x axis}
+
+\item{xby}{option to specify intervals for x axis}
+
+\item{main}{option to add title}
+
+\item{xlab}{option to specify x axis label}
+
+\item{ylab}{option to specify y axis label}
+
 \item{trial_legend}{option to include a legend for trial colors}
 
 \item{MA_legend}{option to include a legend for meta-analysis symbols}
