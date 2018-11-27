@@ -70,8 +70,8 @@ RMSTplot <- function(RMSTobject, type="l", col=c("red","blue","green","orange","
                                ifelse(RMSTobject[[3]][i,1]=="univariate", 0.9,  0.3)))
       
       #mvma
-      points(RMSTobject[[3]][i,2]+stagger, RMSTobject[[3]][i,3], pch=mypch, col="black")
-      arrows(RMSTobject[[3]][i,2]+stagger, RMSTobject[[3]][i,4], RMSTobject[[3]][i,2]+stagger, RMSTobject[[3]][i,5], angle=90, code=3, length=0.05, col="black")
+      points(RMSTobject[[3]][i,2]+stagger, RMSTobject[[3]][i,4], pch=mypch, col="black")
+      arrows(RMSTobject[[3]][i,2]+stagger, RMSTobject[[3]][i,6], RMSTobject[[3]][i,2]+stagger, RMSTobject[[3]][i,7], angle=90, code=3, length=0.05, col="black")
       
     }
     
