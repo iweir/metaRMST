@@ -28,8 +28,10 @@
 #' 
 #' # generate figure: 
 #' obj <- RMSTcurves(dat, time_horizons=c(12,24,36), tmax=40, nboot=50)
-#' RMSTplot(obj, xlim=c(0,40), trial_legend=TRUE, MA_legend=TRUE, ylim=c(-0.25,2.75), yby=0.5, ylab="Difference in RMST (months)", xlab="Time (months)")
+#' RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
 #' 
+#' @import mvmeta meta survival survRM2
+#' @importFrom rstpm2 stpm2 predict
 #' @references
 #' Wei, Y, Royston, P, Tierney, JF and Parmar, MKB. (2015). Meta-analysis of time-to-event outcomes 
 #' from randomized trials using restricted mean survival time: application to 

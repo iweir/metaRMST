@@ -18,6 +18,9 @@
 #' @param ylab option to specify y axis label
 #' @description Plot the \code{RMSTcurve} object
 #' @return a plot of RMSTD over time with option to add combined effect estimates and CIs
+#' @import mvmeta meta survival survRM2
+#' @importFrom graphics abline arrows axis legend points lines plot
+#' @importFrom stats qnorm
 #' @export
 
 RMSTplot <- function(RMSTobject, type="l", col=c("red","blue","green","orange","purple", "yellow", "brown", "gray"),

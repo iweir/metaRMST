@@ -47,7 +47,7 @@ result <- metaRMSTD(dat, time_horizons=c(12,24,36), MA_method="mvma")
 
 # generate figure: 
 obj <- RMSTcurves(dat, time_horizons=c(12,24,36), tmax=40, nboot=50)
-RMSTplot(obj, xlim=c(0,40), trial_legend=TRUE, MA_legend=TRUE, ylim=c(-0.25,2.75), yby=0.5, ylab="Difference in RMST (months)", xlab="Time (months)")
+RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
 
 }
 \references{
