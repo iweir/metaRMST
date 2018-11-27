@@ -13,7 +13,7 @@ Depends: R (>= 3.4.4),
 	mvmeta,
 	metagen,
 	meta
-License: What license is it under?
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0

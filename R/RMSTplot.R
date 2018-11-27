@@ -6,6 +6,16 @@
 #' @param estimates option to include meta-analysis estimates and CIs 
 #' @param MA_legend option to include a legend for meta-analysis symbols
 #' @param trial_legend option to include a legend for trial colors
+#' @param type specify plot type (defaults to line plot) 
+#' @param col option to specify vector of colors for each study
+#' @param lwd option to specify line width
+#' @param ylim option to specify limits for y axis
+#' @param yby option to specify intervals for y axis
+#' @param xlim option to specify limits for x axis
+#' @param xby option to specify intervals for x axis
+#' @param main option to add title
+#' @param xlab option to specify x axis label
+#' @param ylab option to specify y axis label
 #' @description Plot the \code{RMSTcurve} object
 #' @return a plot of RMSTD over time with option to add combined effect estimates and CIs
 #' @export

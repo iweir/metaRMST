@@ -1,8 +1,6 @@
 ### Translates variance vector with NA's
 ## to meta-analysis covariance matrix
 
-#' @export
-
 vartocov = function(var_vec) {
     # number of non-missing variances
     num.vars = sum(!is.na(var_vec))
