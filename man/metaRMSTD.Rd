@@ -46,8 +46,9 @@ dat <- AorticStenosisTrials
 result <- metaRMSTD(dat, time_horizons=c(12,24,36), MA_method="mvma")
 
 # generate figure: 
-obj <- RMSTcurves(dat, time_horizons=c(12,24,36))
-RMSTplot(obj)
+obj <- RMSTcurves(dat, time_horizons=c(12,24,36), tmax=40, nboot=50)
+RMSTplot(obj, xlim=c(0,40), trial_legend=T, MA_legend=T, ylim=c(-0.25,2.75), yby=0.5, ylab="Difference in RMST (months)", xlab="Time (months)")
+
 }
 \references{
 Wei, Y, Royston, P, Tierney, JF and Parmar, MKB. (2015). Meta-analysis of time-to-event outcomes 
