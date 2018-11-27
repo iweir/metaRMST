@@ -70,7 +70,7 @@ RMSTcurves <- function(trialdata, time_horizons, tmax=max(time_horizons), tstep=
   if(MA_uni){
     UNI_res <- metaRMSTD(trialdata, time_horizons=time_horizons, MA_method="uni")
   }else {UNI_res <- c()}
-  MA_results <- rbind(mvma_res$REresult, mvma_boot_res$REresult, RP_res$result, UNI_res$result)
+  MA_results <- rbind(mvma_res$REresult, mvma_boot_res$REresult, RP_res$result[,1:9], UNI_res$result[,1:9])
 
   return(list(RMST=RMSTcurveRes, RMST_est=RPres, MA_results=MA_results))
 }
