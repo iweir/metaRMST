@@ -1,13 +1,7 @@
 Package: metaRMST
 Title: Meta-Analysis of RMSTD
 Version: 0.0.0.9000
-<<<<<<< HEAD
 Authors@R: person("Isabelle", "Weir", role = c("aut", "cre"), email = "iweir@bu.edu")
-=======
-Authors@R: c(person("Isabelle", "Weir", role = c("aut", "cre"), email = "iweir@bu.edu"),
-  person("Lu", "Tian", role = "aut", email = "Lutian@stanford.edu"),
-  person("Ludovic", "Trinquart", role = "aut", email = "ludovic@bu.edu"))
->>>>>>> 74b637b40aea3b2775c960b28db33a89dd0ece5a
 Author: Isabelle R Weir [aut, cre], Lu Tian [aut], Ludovic Trinquart [aut]
 Maintainer: Isabelle R Weir <iweir@bu.edu>
 Description: R implementation of a multivariate meta-analysis model for the difference in restricted mean survival times (RMST). Use this package with individual patient level data for a time-to-event outcome to determine combined effect estimates according to 4 methods: 1)  a univariate meta-analysis using observed treatment effects, 2) a univariate meta-analysis using effects predicted by fitted Royston-Parmar flexible parametric models, 3) multivariate meta-analysis with analytically derived covariance, 4) multivariate meta-analysis with bootstrap derived covariance. This package computes all combined effects and provides an RMSTD curve with option to include combined effect point estimates and their confidence intervals.
