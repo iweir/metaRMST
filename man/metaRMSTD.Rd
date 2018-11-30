@@ -42,15 +42,16 @@ Dersimonian and Laird for univariate MA.
 }
 \examples{
 # read in built-in dataset 
+\donttest{
 data(AorticStenosisTrials)
 
 # meta-analysis to obtain combined effect by multivariate model (method="mvma")
 result <- metaRMSTD(AorticStenosisTrials, time_horizons=c(12,24,36), MA_method="mvma")
 
 # generate figure: 
-obj <- RMSTcurves(AorticStenosisTrials, time_horizons=c(12,24,36), tmax=40, nboot=50)
+obj <- RMSTcurves(AorticStenosisTrials, time_horizons=c(12,24,36), tmax=40, nboot=500)
 RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
-
+}
 }
 \references{
 Wei, Y, Royston, P, Tierney, JF and Parmar, MKB. (2015). Meta-analysis of time-to-event outcomes 

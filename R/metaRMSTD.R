@@ -23,15 +23,16 @@
 #' Variable names must include Trial ID ("trialID"), Time ("Time"), Event status ("Event"), and randomization group ("Arm").
 #' @examples 
 #' # read in built-in dataset 
+#' \donttest{
 #' data(AorticStenosisTrials)
 #' 
 #' # meta-analysis to obtain combined effect by multivariate model (method="mvma")
 #' result <- metaRMSTD(AorticStenosisTrials, time_horizons=c(12,24,36), MA_method="mvma")
 #' 
 #' # generate figure: 
-#' obj <- RMSTcurves(AorticStenosisTrials, time_horizons=c(12,24,36), tmax=40, nboot=50)
+#' obj <- RMSTcurves(AorticStenosisTrials, time_horizons=c(12,24,36), tmax=40, nboot=500)
 #' RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
-#' 
+#' }
 #' @import mvmeta meta survival survRM2
 #' @importFrom rstpm2 stpm2 predict
 #' @references
