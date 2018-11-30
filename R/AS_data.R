@@ -1,28 +1,28 @@
 #' Aortic Stenosis RCT data
 #'
 #' Data from 5 randomized controlled trials of transcatheter aortic valve
-#' replacement vs surgery in patients with Aortic Stenosis. For each RCT 
-#' and respective primary endpoint, we reconstructed the
-#' individual patient data from each randomization group.
+#' replacement vs surgery in patients with Aortic Stenosis. The outcome is time
+#' until death from any cause. For each RCT, 
+#' we reconstructed the individual patient data for each randomization group.
 #' We first extracted the time and survival probability coordinates 
 #' from the Kaplan–Meier curves using the 
 #' DigitizeIt software (\url{http://www.digitizeit.de/}). We used 
 #' these coordinates, the total numbers of events, and the 
 #' numbers of participants at risk to determine individual
-#' event times and event indicators. 
+#' event times and event indicators. (Guyot, BMC Med Res Method 2012)
 #' @docType data
 #' @usage data(AorticStenosisTrials)
 #' @note 
 #' \tabular{ccc}{
-#'   trialID \tab Name \tab Minimum of last observed times*\cr
+#'   Trial ID \tab Trial Name \tab Last observed time (months)*\cr
 #'   ---------------------------------\tab--------------------\tab-----------------------------------------------\cr
 #'   1 \tab NOTION \tab 24.0\cr
 #'   2 \tab PARTNER \tab 63.3\cr
 #'   3 \tab SURTAVI \tab 24.1\cr
 #'   4 \tab PARTNER2 \tab 36.1\cr
 #'   5 \tab USCoreValve \tab 24.1}
-#' * Times for each trial are determined by the minimum of the last observed times across the two randomization groups.
-#' All reported times above are in months. 
+#' * minimum of the last observed times across the two randomization groups.
+#' 
 #' @references
 #' Sondergaard, L, Steinbruchel, DA, Ihlemann, N, Nissen, H, Kjeldsen, BJ, Peturs-son, P, Ngo, AT, Olsen, NT,
 #'  Chang, Y, Franzen, OW and  others. (2016).  Two-year outcomes in patients with severe aortic valve stenosis

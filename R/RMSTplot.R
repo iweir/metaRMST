@@ -1,4 +1,4 @@
-#' Plot RMSTD over time interval
+#' Plot RMST curves in each trial and combined effects
 #'
 #'  
 #'
@@ -17,7 +17,7 @@
 #' @param xlab option to specify x axis label
 #' @param ylab option to specify y axis label
 #' @description Plot the \code{RMSTcurve} object
-#' @return a plot of RMSTD over time with option to add combined effect estimates and CIs
+#' @return a plot of RMSTD over time with option to add combined effect estimates and pointwise 95% confidence intervals
 #' @import mvmeta meta survival survRM2
 #' @importFrom graphics abline arrows axis legend points lines plot
 #' @importFrom stats qnorm
