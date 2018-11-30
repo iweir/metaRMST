@@ -5,7 +5,7 @@
 #' until death from any cause. For each RCT, 
 #' we reconstructed the individual patient data for each randomization group.
 #' We first extracted the time and survival probability coordinates 
-#' from the Kaplan–Meier curves using the 
+#' from the Kaplan-Meier curves using the 
 #' DigitizeIt software (\url{http://www.digitizeit.de/}). We used 
 #' these coordinates, the total numbers of events, and the 
 #' numbers of participants at risk to determine individual
@@ -15,7 +15,6 @@
 #' @note 
 #' \tabular{ccc}{
 #'   Trial ID \tab Trial Name \tab Last observed time (months)*\cr
-#'   ---------------------------------\tab--------------------\tab-----------------------------------------------\cr
 #'   1 \tab NOTION \tab 24.0\cr
 #'   2 \tab PARTNER \tab 63.3\cr
 #'   3 \tab SURTAVI \tab 24.1\cr
