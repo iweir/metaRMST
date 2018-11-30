@@ -22,8 +22,8 @@
 #' The \code{trialdata} must be formatted as a dataframe containing the IPD for each single trial.
 #' Variable names must include Trial ID ("trialID"), Time ("Time"), Event status ("Event"), and randomization group ("Arm").
 #' @examples 
-#' # read in built-in dataset 
 #' \donttest{
+#' # read in built-in dataset 
 #' data(AorticStenosisTrials)
 #' 
 #' # meta-analysis to obtain combined effect by multivariate model (method="mvma")

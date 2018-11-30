@@ -41,8 +41,8 @@ across the two groups. We implement the method-of-moments estimator for MVMA
 Dersimonian and Laird for univariate MA.
 }
 \examples{
-# read in built-in dataset 
 \donttest{
+# read in built-in dataset 
 data(AorticStenosisTrials)
 
 # meta-analysis to obtain combined effect by multivariate model (method="mvma")
