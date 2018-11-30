@@ -1,6 +1,6 @@
 Package: metaRMST
 Title: Meta-Analysis of RMSTD
-Version: 0.0.0.9000
+Version: 0.0.1.0
 Authors@R: person("Isabelle", "Weir", role = c("aut", "cre"), email = "iweir@bu.edu")
 Author: Isabelle R Weir [aut, cre], Lu Tian [aut], Ludovic Trinquart [aut]
 Maintainer: Isabelle R Weir <iweir@bu.edu>
