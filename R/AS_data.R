@@ -15,6 +15,7 @@
 #' @note 
 #' \tabular{ccc}{
 #'   Trial ID \tab Trial Name \tab Last observed time (months)*\cr
+#'   ----------------- \tab ------------------- \tab ---------------------\cr
 #'   1 \tab NOTION \tab 24.0\cr
 #'   2 \tab PARTNER \tab 63.3\cr
 #'   3 \tab SURTAVI \tab 24.1\cr
@@ -25,7 +26,7 @@
 #' @references
 #' Sondergaard, L, Steinbruchel, DA, Ihlemann, N, Nissen, H, Kjeldsen, BJ, Peturs-son, P, Ngo, AT, Olsen, NT,
 #'  Chang, Y, Franzen, OW and  others. (2016).  Two-year outcomes in patients with severe aortic valve stenosis
-#'  randomized to transcatheter versus sur-gical aortic valve replacement. Circ Cardiovasc Interv 9(6)
+#'  randomized to transcatheter versus surgical aortic valve replacement. Circ Cardiovasc Interv 9(6)
 #'
 #' Mack, MJ, Leon, MB, Smith, CR, Miller, DC, Moses, JW, Tuzcu, EM, Webb, JG, Douglas, PS,
 #'  Anderson, WN, Blackstone, EH and others. (2015).5-year outcomes of transcatheter aortic valve replacement or

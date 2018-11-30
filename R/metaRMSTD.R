@@ -40,10 +40,10 @@
 #' individual participant data. Stat Med 34(21), 2881-2898.
 #' 
 #' Chen, Han, Alisa K. Manning, and Josée Dupuis. "A method of moments estimator for 
-#' random effect multivariate meta‐analysis." Biometrics 68.4 (2012): 1278-1284.
+#' random effect multivariate meta-analysis." Biometrics 68.4 (2012): 1278-1284.
 #' 
-#' Jackson, Dan, Ian R. White, and Richard D. Riley. "A matrix‐based method of moments for 
-#' fitting the multivariate random effects model for meta‐analysis and meta‐regression."
+#' Jackson, Dan, Ian R. White, and Richard D. Riley. "A matrix-based method of moments for 
+#' fitting the multivariate random effects model for meta-analysis and meta-regression."
 #' Biometrical Journal 55.2 (2013): 231-245.
 #' @export
 
