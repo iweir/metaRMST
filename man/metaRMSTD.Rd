@@ -4,19 +4,19 @@
 \alias{metaRMSTD}
 \title{Meta-analysis of RMSTD at multiple time horizons}
 \usage{
-metaRMSTD(trialdata, time_horizons, nboot = 500, MA_method)
+metaRMSTD(trialdata, time_horizons, MA_method, nboot = 500)
 }
 \arguments{
 \item{trialdata}{IPD trial data, see details for specifications}
 
 \item{time_horizons}{specified vector of time horizons for the meta-analysis}
 
-\item{nboot}{the number of bootstrap iterations, if using the MVMA with bootstrap covariance matrix; default=500}
-
 \item{MA_method}{the desired meta-analysis method; options are: "mvma", "mvma_boot", "uni", "uni_flex"}
+
+\item{nboot}{the number of bootstrap iterations, if using the MVMA with bootstrap covariance matrix; default=500}
 }
 \value{
-The \code{metaRMSTD} function returns a list object containing the random effect model results,
+The \code{metaRMSTD} function returns a list object containing the random-effects model results,
 the RMSTD and SE values for each trial at each available time horizon, and the estimated within-trial covariance matrix for each RCT.
 }
 \description{
@@ -31,22 +31,24 @@ Methods include:
 }
 \details{
 Specify the time horizons at which to calculate the meta-analytic results.
-The \code{trialdata} must be formatted as a dataframe containing the IPD for each single trial including trialID indication.
-Variable names must include Time ("Time"), Event status ("Event"), and randomization group ("Arm").
+The \code{trialdata} must be formatted as a dataframe containing the IPD for each single trial.
+Variable names must include Trial ID ("trialID"), Time ("Time"), Event status ("Event"), and randomization group ("Arm").
 }
 \note{
-RMSTD is estimable if time horizon > minimum of
- last observed times. We implement the method of moments estimator for MVMA and Dersimonian and Laird for univariate MA
+RMSTD is estimable if time horizon > minimum of last observed times 
+across the two groups. We implement the method-of-moments estimator for MVMA 
+(Chen et al. Biometrics 2012, Jackson et al. Biometrical Journ 2013) and 
+Dersimonian and Laird for univariate MA.
 }
 \examples{
 # read in built-in dataset 
-dat <- AorticStenosisTrials
+data(AorticStenosisTrials)
 
 # meta-analysis to obtain combined effect by multivariate model (method="mvma")
-result <- metaRMSTD(dat, time_horizons=c(12,24,36), MA_method="mvma")
+result <- metaRMSTD(AorticStenosisTrials, time_horizons=c(12,24,36), MA_method="mvma")
 
 # generate figure: 
-obj <- RMSTcurves(dat, time_horizons=c(12,24,36), tmax=40, nboot=50)
+obj <- RMSTcurves(AorticStenosisTrials, time_horizons=c(12,24,36), tmax=40, nboot=50)
 RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
 
 }
@@ -54,4 +56,11 @@ RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xla
 Wei, Y, Royston, P, Tierney, JF and Parmar, MKB. (2015). Meta-analysis of time-to-event outcomes 
 from randomized trials using restricted mean survival time: application to 
 individual participant data. Stat Med 34(21), 2881-2898.
+
+Chen, Han, Alisa K. Manning, and Josée Dupuis. "A method of moments estimator for 
+random effect multivariate meta‐analysis." Biometrics 68.4 (2012): 1278-1284.
+
+Jackson, Dan, Ian R. White, and Richard D. Riley. "A matrix‐based method of moments for 
+fitting the multivariate random effects model for meta‐analysis and meta‐regression."
+Biometrical Journal 55.2 (2013): 231-245.
 }

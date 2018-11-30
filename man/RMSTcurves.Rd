@@ -15,24 +15,25 @@ RMSTcurves(trialdata, time_horizons, tmax = max(time_horizons),
 
 \item{tmax}{maximum value for RMSTD to be calculated in each trial}
 
-\item{tstep}{increment for calculation of RMSTD over time interval from 0 to tmax}
+\item{tstep}{increment for calculation of RMSTD over time interval from 0 to tmax; default=0.25}
 
-\item{nboot}{the number of bootstrap iterations, if using the MVMA with bootstrap covariance matrix; defaults to nboot=500}
+\item{nboot}{the number of bootstrap iterations, if using the MVMA with bootstrap covariance matrix; default=500}
 
-\item{MA_mvma}{TRUE or FALSE indicates whether to calculate combined effect with this method}
+\item{MA_mvma}{TRUE or FALSE indicates whether to include combined effect by this method}
 
-\item{MA_mvma_boot}{TRUE or FALSE indicates whether to calculate combined effect with this method}
+\item{MA_mvma_boot}{TRUE or FALSE indicates whether to include combined effect by this method}
 
-\item{MA_uni}{TRUE or FALSE indicates whether to calculate combined effect with this method}
+\item{MA_uni}{TRUE or FALSE indicates whether to include combined effect by this method}
 
-\item{MA_uni_flex}{TRUE or FALSE indicates whether to calculate combined effect with this method}
+\item{MA_uni_flex}{TRUE or FALSE indicates whether to include combined effect by this method}
 }
 \value{
 an object to be plotted with \code{\link{RMSTplot}}
 }
 \description{
-Prepare the data for use with \code{\link{RMSTplot}}. This function computes RMSTD over a specified time interval and also fits a flexible parametric model to each trial.
-It also computes the estimated combined effects for each of the 4 methods described for \code{\link{metaRMSTD}}.
+Prepare the data for use with \code{\link{RMSTplot}}. This function computes RMSTD over 
+specified time horizons and also fits a flexible parametric model to each trial.
+It calls the \code{\link{metaRMSTD}} function to compute the estimated combined effects for each of the 4 methods.
 }
 \references{
 Royston, P. and Parmar, MK. Flexible parametric proportional-hazards and proportional-odds models for censored

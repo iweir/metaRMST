@@ -2,7 +2,7 @@
 % Please edit documentation in R/RMSTplot.R
 \name{RMSTplot}
 \alias{RMSTplot}
-\title{Plot RMSTD over time interval}
+\title{Plot RMST curves in each trial and combined effects}
 \usage{
 RMSTplot(RMSTobject, type = "l", col = c("red", "blue", "green",
   "orange", "purple", "yellow", "brown", "gray"), lwd = 2,
@@ -41,7 +41,7 @@ RMSTplot(RMSTobject, type = "l", col = c("red", "blue", "green",
 \item{estimates}{option to include meta-analysis estimates and CIs}
 }
 \value{
-a plot of RMSTD over time with option to add combined effect estimates and CIs
+a plot of RMSTD over time with option to add combined effect estimates and pointwise 95% confidence intervals
 }
 \description{
 Plot the \code{RMSTcurve} object
