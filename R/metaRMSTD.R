@@ -22,10 +22,11 @@
 #' The \code{trialdata} must be formatted as a dataframe containing the IPD for each single trial.
 #' Variable names must include Trial ID ("trialID"), Time ("Time"), Event status ("Event"), and randomization group ("Arm").
 #' @examples 
-#' \donttest{
+#' 
 #' # read in built-in dataset 
 #' data(AorticStenosisTrials)
 #' 
+#' \donttest{
 #' # meta-analysis to obtain combined effect by multivariate model (method="mvma")
 #' result <- metaRMSTD(AorticStenosisTrials, time_horizons=c(12,24,36), MA_method="mvma")
 #' 
@@ -33,6 +34,15 @@
 #' obj <- RMSTcurves(AorticStenosisTrials, time_horizons=c(12,24,36), tmax=40, nboot=500)
 #' RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
 #' }
+#' 
+#' \dontshow{
+#' set.seed(10)
+#' sample_rows <- sample(1:nrow(AorticStenosisTrials),500, replace=FALSE)
+#' result_hidden <- metaRMSTD(AorticStenosisTrials[sample_rows,], time_horizons=c(12,24,36), MA_method="uni")
+#' obj_hidden <- RMSTcurves(AorticStenosisTrials[sample_rows,], time_horizons=c(12,24,36), tmax=40, MA_mvma_boot=FALSE, MA_uni_flex=FALSE, MA_mvma=FALSE, tstep=1)
+#' RMSTplot(obj_hidden, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
+#' }
+#' 
 #' @import mvmeta meta survival survRM2
 #' @importFrom rstpm2 stpm2 predict
 #' @references

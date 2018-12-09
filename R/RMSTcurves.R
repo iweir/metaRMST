@@ -44,6 +44,7 @@ RMSTcurves <- function(trialdata, time_horizons, tmax=max(time_horizons), tstep=
     }
   }
   # fit RP flex parametric model in each trial
+  if(MA_uni_flex){
   RPres <- matrix(NA, length(t), J+1)
   for (j in 1:J){
     dat <- trialdata[which(trialdata$trialID==j),]
@@ -56,7 +57,7 @@ RMSTcurves <- function(trialdata, time_horizons, tmax=max(time_horizons), tstep=
       RPres[index,1] <- tau
     }
   }
-
+  }else{RPres <- matrix(NA, length(t), J+1)}
   # prepare MA results for RMST curves+RP curves plot
   if(MA_mvma){
     mvma_res      <- metaRMSTD(trialdata, time_horizons=time_horizons, MA_method="mvma")
