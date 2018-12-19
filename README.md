@@ -25,3 +25,5 @@ mvma_res$REresult
 obj <- RMSTcurves(AorticStenosisTrials, time_horizons=c(12,24,36), tmax=40, nboot=50)
 RMSTplot(obj, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
 ```
+
+[![](https://cranlogs.r-pkg.org/badges/metaRMST)](https://cran.r-project.org/package=metaRMST)
