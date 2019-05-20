@@ -1,8 +1,13 @@
 # metaRMST
-An R package for meta-analysis of RMSTD
+An R package for meta-analysis of RMSTD (available on CRAN at: https://CRAN.R-project.org/package=metaRMST)
 
 #### R Installation Instructions
 ```
+# from CRAN:
+install.packages("metaRMST")
+library(metaRMST)
+
+# or you may install directly from github:
 install.packages("devtools")
 library(devtools)
 devtools::install_github("iweir/metaRMST")
