@@ -1,6 +1,8 @@
 # metaRMST
 An R package for meta-analysis of RMSTD (available on CRAN at: https://CRAN.R-project.org/package=metaRMST)
 
+Reference: Weir, I., Tian, L., & Trinquart, L. (2019). Multivariate meta-analysis model for thedifference in restricted mean survival times. Biostatistics. 
+
 #### R Installation Instructions
 ```
 # from CRAN:
