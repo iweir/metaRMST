@@ -43,7 +43,8 @@
 #' RMSTplot(obj_hidden, xlim=c(0,40), ylim=c(-0.25,2.75), yby=0.5, ylab="RMSTD (mos)", xlab="Time (mos)")
 #' }
 #' 
-#' @import mvmeta meta survival survRM2
+#' @import mvmeta survival survRM2
+#' @importFrom meta metagen
 #' @importFrom rstpm2 stpm2 predict
 #' @references
 #' Wei, Y, Royston, P, Tierney, JF and Parmar, MKB. (2015). Meta-analysis of time-to-event outcomes 
@@ -123,7 +124,8 @@ uni <- data.frame(method=numeric(length(time_horizons)),
 
 for (i in 1:length(time_horizons)){
 
-	temp <- metagen(rmstd_table[,i], se_table[,i], method.tau="DL")
+	temp <- metagen(rmstd_table[,i], se_table[,i], method.tau="DL",
+	                method.tau.ci = "")
 
 	uni$method[i]       <- "univariate"
 	uni$time_horizon[i]	<- time_horizons[i]
@@ -131,7 +133,7 @@ for (i in 1:length(time_horizons)){
 	uni$lower[i]  <- temp$lower.random
 	uni$upper[i] <- temp$upper.random
 	uni$SE[i]	<- temp$seTE.random
-	uni$Z[i] <- temp$zval.random
+	uni$Z[i] <- temp$statistic.random
 	uni$pval[i]	<- temp$pval.random
 	uni$ntrials[i] <- length(which(!is.na(rmstd_table[,i])))
 	uni$tausq[i] <- (temp$tau)^2
@@ -184,7 +186,8 @@ rownames(RP_se_table) <- paste0("study_", 1:J)
 
 
 for (i in 1:length(time_horizons)){
-  temp <- metagen(RP_rmstd_table[,i], RP_se_table[,i], method.tau="DL")
+  temp <- metagen(RP_rmstd_table[,i], RP_se_table[,i], method.tau="DL",
+                  method.tau.ci = "")
 
   RP$method[i]        <- "Univariate with model estimates"
   RP$time_horizon[i]	<- time_horizons[i]
@@ -192,7 +195,7 @@ for (i in 1:length(time_horizons)){
   RP$lower[i]         <- temp$lower.random
   RP$upper[i]         <- temp$upper.random
   RP$SE[i]	          <- temp$seTE.random
-  RP$Z[i]             <- temp$zval.random
+  RP$Z[i]             <- temp$statistic.random
   RP$pval[i]	        <- temp$pval.random
   RP$ntrials[i] <- length(which(!is.na(RP_rmstd_table[,i])))
   RP$tausq[i] <- (temp$tau)^2

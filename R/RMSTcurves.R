@@ -13,7 +13,7 @@
 #' @param MA_uni TRUE or FALSE indicates whether to include combined effect by this method
 #' @param MA_uni_flex TRUE or FALSE indicates whether to include combined effect by this method
 #' @return an object to be plotted with \code{\link{RMSTplot}}
-#' @import mvmeta meta survival survRM2
+#' @import mvmeta survival survRM2
 #' @importFrom rstpm2 stpm2 predict 
 #' @export
 #' @description Prepare the data for use with \code{\link{RMSTplot}}. This function computes RMSTD over 
