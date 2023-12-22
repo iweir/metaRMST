@@ -18,7 +18,7 @@
 #' @param ylab option to specify y axis label
 #' @description Plot the \code{RMSTcurve} object
 #' @return a plot of RMSTD over time with option to add combined effect estimates and pointwise 95% confidence intervals
-#' @import mvmeta meta survival survRM2
+#' @import mvmeta survival survRM2
 #' @importFrom graphics abline arrows axis legend points lines plot
 #' @importFrom stats qnorm
 #' @export
